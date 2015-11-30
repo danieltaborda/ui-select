@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.13.2 - 2015-10-09T15:34:24.040Z
+ * Version: 0.13.3 - 2015-11-30T12:23:16.040Z
  * License: MIT
  */
 
@@ -519,7 +519,7 @@ uis.controller('uiSelectCtrl',
               if (!item || angular.equals( ctrl.items[0], item ) ) {
                 return;
               }
-            } else {
+             } else if(!$event){  //if not mouse click, that done to prevent setting value by activeIndex 
               // keyboard nav happened first, user selected from dropdown
               item = ctrl.items[ctrl.activeIndex];
             }

@@ -280,7 +280,7 @@ uis.controller('uiSelectCtrl',
               if (!item || angular.equals( ctrl.items[0], item ) ) {
                 return;
               }
-            } else {
+            } else if(!$event){  //if not mouse click, that done to prevent setting value by activeIndex 
               // keyboard nav happened first, user selected from dropdown
               item = ctrl.items[ctrl.activeIndex];
             }
